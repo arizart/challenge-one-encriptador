@@ -1,0 +1,18 @@
+:root {
+	--main-bg: blue;
+	--output-bg: red;
+}
+
+html,
+body,
+#global-container {
+	min-height: 100%;
+}
+
+.main-panel {
+	background-color: var(--main-bg);
+}
+
+.output-panel {
+	background-color: var(--output-bg);
+}
