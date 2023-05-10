@@ -1,5 +1,48 @@
 @media only screen and (min-width: 768px) {
 	#global-container {
-		padding: 3rem;
+		padding: 3.5rem;
+		display: grid;
+		grid-template-columns: 1fr 1.2fr 1fr;
+		column-gap: 4rem;
+	}
+
+	.main-panel,
+	.output-panel {
+		padding: 2.6rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.main-panel {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		padding-left: 22%;
+	}
+
+	.main-panel p {
+		margin-bottom: 1rem;
+		padding: 1em;
+	}
+
+	.btns {
+		display: flex;
+	}
+
+	.btns .btn {
+		width: 50%;
+	}
+
+	.btns .btn-primary {
+		margin-right: 1rem;
+	}
+
+	.btns .btn-secondary {
+		margin-left: 1rem;
+	}
+
+	.output-panel {
+		grid-column-start: 3;
+		grid-column-end: 4;
+		border-radius: 2.8rem;
 	}
 }
