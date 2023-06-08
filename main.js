@@ -1,45 +1,38 @@
+var input, output, encrypt, decrypt, copy;
+
 function Init() {
-	window.encrypt = document.querySelector("#encrypt");
-	window.decrypt = document.querySelector("#decrypt");
-	window.copy = document.querySelector("#copy");
+	input = document.querySelector(".main-panel textarea");
+	output = document.querySelector(".output-panel textarea");
+	encrypt = document.querySelector("#encrypt");
+	decrypt = document.querySelector("#decrypt");
+	copy = document.querySelector("#copy");
 	encrypt.addEventListener("click", EncryptText);
 	decrypt.addEventListener("click", DecryptText);
 	copy.addEventListener("click", CopyOutput);
 }
 
 function EncryptText() {
-	const input = document.querySelector(".main-panel textarea").value;
-	const output = document.querySelector(".output-panel textarea");
-
-	const encrypted = input
+	output.value = input.value
 		.toLowerCase()
 		.replaceAll("a", "ai")
 		.replaceAll("e", "enter")
 		.replaceAll("i", "imes")
 		.replaceAll("o", "ober")
 		.replaceAll("u", "ufat");
-
-	output.value = encrypted;
 }
 
 function DecryptText() {
-	const input = document.querySelector(".main-panel textarea").value;
-	const output = document.querySelector(".output-panel textarea");
-
-	const decrypted = input
+	output.value = input.value
 		.toLowerCase()
 		.replaceAll("ufat", "u")
 		.replaceAll("ober", "o")
 		.replaceAll("imes", "i")
 		.replaceAll("enter", "e")
 		.replaceAll("ai", "a");
-
-	output.value = decrypted;
 }
 
 function CopyOutput() {
-	const output = document.querySelector(".output-panel textarea").value;
-	navigator.clipboard.writeText(output);
+	navigator.clipboard.writeText(output.value);
 }
 
 window.addEventListener("load", Init);
