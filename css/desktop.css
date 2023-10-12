@@ -13,7 +13,7 @@
 	}
 	.input-panel {
 		flex-grow: 3;
-		margin-top: 8rem;
+		margin-top: 6rem;
 	}
 	.output-panel {
 		flex-grow: 0.5;
@@ -25,14 +25,14 @@
 		flex-direction: column;
 		padding: 2rem;
 	}
-	.input-panel textarea,
-	.output-panel textarea {
+	#input-field,
+	#output-field {
 		flex-grow: 1;
 	}
-	.input-panel textarea {
+	#input-field {
 		font-size: 2rem;
 	}
-	.output-panel textarea {
+	#output-field {
 		font-size: 1.5rem;
 	}
 }

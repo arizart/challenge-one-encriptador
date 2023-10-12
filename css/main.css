@@ -7,7 +7,7 @@
 * {
 	box-sizing: border-box;
 	cursor: default;
-	line-height: 1.5rem;
+	line-height: 1.5em;
 	font-family: "Trebuchet MS";
 	color: var(--color-primary);
 }

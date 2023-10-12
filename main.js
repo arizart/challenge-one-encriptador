@@ -1,10 +1,11 @@
-var input, output, encrypt, decrypt, copy;
+var input, output, encrypt, decrypt, empty, copy;
 
 function Init() {
 	input = document.querySelector("#input-field");
 	output = document.querySelector("#output-field");
 	encrypt = document.querySelector("#encrypt-button");
 	decrypt = document.querySelector("#decrypt-button");
+	empty = document.querySelector("#empty-message");
 	copy = document.querySelector("#copy-button");
 	encrypt.addEventListener("click", EncryptText);
 	decrypt.addEventListener("click", DecryptText);
@@ -12,6 +13,7 @@ function Init() {
 }
 
 function EncryptText() {
+	empty.style.zIndex = "-1";
 	output.value = input.value
 		.toLowerCase()
 		.replaceAll("a", "ai")
@@ -22,6 +24,7 @@ function EncryptText() {
 }
 
 function DecryptText() {
+	empty.style.zIndex = "-1";
 	output.value = input.value
 		.toLowerCase()
 		.replaceAll("ufat", "u")
@@ -34,6 +37,7 @@ function DecryptText() {
 function CopyText() {
 	navigator.clipboard.writeText(output.value);
 	output.value = "";
+	empty.style.zIndex = "10";
 }
 
 window.addEventListener("load", Init);
