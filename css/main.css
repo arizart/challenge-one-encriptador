@@ -1,21 +1,31 @@
 :root {
 	--color-primary: #1a237e;
-	--color-secondary: #c5cae9;
+	--color-secondary: #e8eaf6;
 	--color-tertiary: #fafafa;
-	--color-quaternary: #9e9e9e;
+	--color-quaternary: #424242;
 }
 * {
 	box-sizing: border-box;
 	cursor: default;
+	line-height: 1.5rem;
+	font-family: "Trebuchet MS";
+	color: var(--color-primary);
 }
 html,
 body,
 #root {
 	min-height: 100vh;
 }
+#root {
+	background-color: var(--color-secondary);
+}
+a {
+	font-family: "Trebuchet MS";
+}
 textarea {
 	border: none;
 	resize: none;
+	background-color: transparent;
 }
 textarea:focus {
 	outline: none;
@@ -23,22 +33,40 @@ textarea:focus {
 .btn {
 	border: none;
 	border-radius: 1.5rem;
-	padding: 1.6rem;
+	padding: 1.5rem;
+	background-color: transparent;
 	font-size: 1rem;
 }
 a,
 .btn {
 	cursor: pointer;
 }
+.btn-primary {
+	background-color: var(--color-primary);
+	color: var(--color-tertiary);
+}
+.btn-secondary {
+	border: solid 1px var(--color-primary);
+}
 .input-panel textarea {
 	cursor: text;
 }
+.output-panel {
+	background-color: var(--color-tertiary);
+	position: relative;
+}
+.output-panel textarea {
+	color: var(--color-quaternary);
+}
 #info {
 	margin: 1.5rem 0;
+	color: var(--color-quaternary);
+	font-family: "Trebuchet MS";
 }
 #info span {
 	position: relative;
 	top: 0.4rem;
+	color: var(--color-quaternary);
 }
 .input-buttons {
 	display: flex;
@@ -46,4 +74,31 @@ a,
 }
 .input-buttons .btn {
 	flex-grow: 1;
+}
+#empty-message {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+	border-radius: inherit;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-tertiary);
+}
+
+#empty-message p {
+	text-align: center;
+	font-family: "Trebuchet MS";
+	color: var(--color-quaternary);
+}
+
+#empty-message p:first-child {
+	margin: 1.5rem;
+	font-size: 1.5rem;
+	font-weight: bold;
 }
