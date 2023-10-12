@@ -1,2 +1,39 @@
 @media only screen and (min-width: 768px) {
+	#root {
+		display: flex;
+		gap: 2rem;
+		padding: 3rem 14%;
+	}
+	#logo-alura {
+		flex-grow: 1;
+		text-align: center;
+	}
+	#logo-alura a {
+		font-size: 6rem;
+	}
+	.input-panel {
+		flex-grow: 3;
+		margin-top: 8rem;
+	}
+	.output-panel {
+		flex-grow: 0.5;
+		border-radius: 3rem;
+	}
+	.input-panel,
+	.output-panel {
+		display: flex;
+		flex-direction: column;
+		padding: 2rem;
+	}
+	.input-panel textarea,
+	.output-panel textarea {
+		flex-grow: 1;
+		line-height: 1.5em;
+	}
+	.input-panel textarea {
+		font-size: 2rem;
+	}
+	.output-panel textarea {
+		font-size: 1.5rem;
+	}
 }
