@@ -3,6 +3,7 @@
 	--color-secondary: #e8eaf6;
 	--color-tertiary: #fafafa;
 	--color-quaternary: #424242;
+	--color-quinary: #e0e0e0;
 }
 * {
 	box-sizing: border-box;
@@ -17,6 +18,7 @@ body,
 	min-height: 100vh;
 }
 #root {
+	display: flex;
 	background-color: var(--color-secondary);
 }
 a {
@@ -48,10 +50,19 @@ a,
 .btn-secondary {
 	border: solid 1px var(--color-primary);
 }
+.shadow {
+	box-shadow: 0 1rem 1rem 0.5rem var(--color-quinary);
+}
+.input-panel,
+.output-panel {
+	display: flex;
+	flex-direction: column;
+}
 .input-panel textarea {
 	cursor: text;
 }
 .output-panel {
+	border-radius: 2rem;
 	background-color: var(--color-tertiary);
 	position: relative;
 }
@@ -90,15 +101,13 @@ a,
 	align-items: center;
 	background-color: var(--color-tertiary);
 }
-
 #empty-message p {
 	text-align: center;
 	font-family: "Trebuchet MS";
 	color: var(--color-quaternary);
 }
-
 #empty-message p:first-child {
-	margin: 1.5rem;
+	margin-bottom: 1.5rem;
 	font-size: 1.5rem;
 	font-weight: bold;
 }

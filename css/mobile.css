@@ -1,2 +1,30 @@
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 577px) and (max-width: 991px) {
+	#root {
+		padding: 3rem;
+		flex-direction: column;
+		gap: 2rem;
+	}
+	#logo-alura a {
+		font-size: 6rem;
+	}
+	.input-panel {
+		margin-top: 3rem;
+		flex-grow: 4;
+		justify-content: end;
+	}
+	.output-panel {
+		padding: 2rem;
+	}
+	#input-field {
+		flex-grow: 1;
+		font-size: 2rem;
+	}
+	#output-field {
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+		overflow: hidden;
+		overflow-wrap: break-word;
+	}
+}
+@media only screen and (max-width: 576px) {
 }

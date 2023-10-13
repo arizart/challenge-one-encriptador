@@ -1,6 +1,5 @@
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
 	#root {
-		display: flex;
 		gap: 2rem;
 		padding: 3rem 14%;
 	}
@@ -11,19 +10,16 @@
 	#logo-alura a {
 		font-size: 6rem;
 	}
+	.input-panel,
+	.output-panel {
+		padding: 2rem;
+	}
 	.input-panel {
 		flex-grow: 3;
 		margin-top: 6rem;
 	}
 	.output-panel {
 		flex-grow: 0.5;
-		border-radius: 2rem;
-	}
-	.input-panel,
-	.output-panel {
-		display: flex;
-		flex-direction: column;
-		padding: 2rem;
 	}
 	#input-field,
 	#output-field {
