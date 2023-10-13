@@ -21,6 +21,7 @@ function EncryptText() {
 		.replaceAll("i", "imes")
 		.replaceAll("o", "ober")
 		.replaceAll("u", "ufat");
+	ResizeTextarea();
 }
 
 function DecryptText() {
@@ -32,12 +33,19 @@ function DecryptText() {
 		.replaceAll("imes", "i")
 		.replaceAll("enter", "e")
 		.replaceAll("ai", "a");
+	ResizeTextarea();
 }
 
 function CopyText() {
 	navigator.clipboard.writeText(output.value);
 	output.value = "";
 	empty.style.zIndex = "10";
+	ResizeTextarea();
+}
+
+function ResizeTextarea() {
+	output.style.height = "auto";
+	output.style.height = `${output.scrollHeight}px`;
 }
 
 window.addEventListener("load", Init);
